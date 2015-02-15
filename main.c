@@ -22,10 +22,18 @@ int main(int argc, char** argv) {
 }
 
 int potenzaIterativa(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int p = 1;
+    for(; esponente > 0; esponente--) {
+        p *= base;
+    }
+    return p;
 }
-int potenzaIterativa(int base, int esponente) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+int potenzaRicorsiva(int base, int esponente) {
+    int ris = 1;
+    if (esponente == 0) {
+        return ris; 
+    }
+    else {
+       ris =  base * potenzaRicorsiva( base, esponente - 1);
+    }
 }
